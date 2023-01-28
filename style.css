@@ -1,0 +1,251 @@
+body{
+    background-color: orange;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    position: relative;
+    top: 40px;
+    left: 15px;
+}
+  
+.main{
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 5vh;
+}
+
+.inputs{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px;
+    padding-top: 100px;
+    align-items: center;
+}
+  
+.inputs textarea{
+    text-transform: lowercase;
+    text-align: start;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgb(235, 229, 229);
+    width: 90%;
+    height: 90%;
+    border: none;
+    background: linear-gradient(-15deg, transparent, 30%,#6f00b5);
+    padding:10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 25px 30px 2px ;
+    -webkit-box-shadow: 1px 25px 30px 2px #0b0700;
+    -moz-box-shadow: 1px 25px 30px 2px #0b0700;
+}
+
+.inputs textarea::placeholder{
+    text-align: start;
+    color: #fff;
+    font-size: 18px;
+}
+  
+.inputs textarea:focus{
+    outline: 1px solid #02d1d8;
+}
+  
+.exclamacion{
+    vertical-align: text-bottom;
+    padding-right: 10px;
+    width: 25px;
+}
+
+.nota{
+    margin: 25px 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: inline;
+    align-self: flex-start;
+
+}
+  
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+  
+.botones input{
+    height: 2.5rem;
+    border-radius: 23px;
+    border: none;
+    font-size: 16px;
+}
+  
+#encriptador {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+#encriptador:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+#encriptador:active {
+    transform: translateY(-1px);
+}
+
+#decencriptador{
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+#decencriptador:hover{
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+#encriptador:hover:active, #decencriptador:hover:active{
+    transform: translateY(-1px);
+}
+  
+#copiar {
+    position: absolute;
+    bottom: 20px;
+    left: 29%;
+    background: linear-gradient(-45deg, #3f00b5, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+   }
+   
+   #copiar:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+   }
+   
+   #copiar:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+   }
+   
+   @keyframes gradient {
+    0% {
+     background-position: 0% 50%;
+    }
+   
+    50% {
+     background-position: 100% 50%;
+    }
+   
+    100% {
+     background-position: 0% 50%;
+    }
+   }
+  
+.resultado{
+    margin: 40px;
+    justify-content: center;
+    padding: 40px;
+    background: linear-gradient(55deg, transparent, #3f00b5);
+    border-radius: 32px;
+    text-align: center  ;
+    width: 250px;
+    height: 440px;
+    position: relative;
+    top:10px;
+    bottom: 10px;
+    box-shadow: 1px 25px 30px 2px ;
+    -webkit-box-shadow: 1px 25px 30px 2px ;
+    -moz-box-shadow: 1px 25px 30px 2px ;
+}
+
+.resultado p {
+    font-style: oblique;
+    font-weight: bold;
+    margin: 5px auto;
+}
+  
+.resultado img{
+    width: 250px;
+}
+  
+footer{
+    height: 5vh;
+    line-height: 5vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    font-weight: bold;
+}
+  
+@media screen and (max-width: 480px) {
+    .inputs{
+        width: 90%;
+    }
+    #ingresado{
+        width: 100%;
+    }
+    .botones{
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    #encriptador{
+      width: 90%;
+    }
+    
+    #decencriptador{
+      width: 90%;
+    }
+    
+    .aclaracion{
+      font-size: 0.7rem;
+    }
+    
+    .exclamacion{
+      width: 20px;
+    }
+}

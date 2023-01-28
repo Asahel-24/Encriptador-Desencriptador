@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador/Desencriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="codificador.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <img class="logo" src="logo.png" alt="">
+        </header>
+
+        <main class="main">
+
+            <div class="inputs">
+                <textarea  placeholder= "Ingrese el texto que desea encriptar/desencriptar..." id="ingresado" required cols="70" rows="10"></textarea>
+                
+                <p class="nota"><img class="exclamacion" src="https://img.icons8.com/ios-filled/50/null/box-important--v1.png"/>NOTA: Solo letras minúsculas y sin caracteres</p>
+
+                <div class="botones">
+                    <input id="encriptador" type="button" onclick="encriptar()" value="Encriptar">
+                    <input id="decencriptador" type="button" onclick="desencriptar()" value="Desencriptar">
+                </div>
+
+            </div>
+    
+            <div class="resultado">
+                <img id="img-resultado" src="pochita.png"/>
+                <div>
+                    <p class="devuelve" style="display: none;" id="devuelve"> </p>
+                    <h2 id="h2">Ningún mensaje fue encontrado</h2>
+                    <p id="mensaje">Ingrese el texto que dece encriptar o desencriptar</p>
+                    <button class="copiar" style="display: none;" id="copiar" onclick="copiar()">Copiar</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Asahel García Florentino @AluraLatam @Oracle</p>
+        </footer>
+    
+    </body>
+</html>
